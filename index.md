@@ -11,7 +11,7 @@ Welcome to my FPGA VGA Driver Project , where l created a custom design of the J
 ### **Project Set-Up**
 Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
 
-<img src="https://github.com/chuka111/SOC_project.github.io/blob/main/docs/assets/images/dashboard.png">
+<img src="docs/assets/images/dashboard.png">
 ### **Template Code**
 Based on each pixel's horizontal location (col), the ColourStripes module assigns particular RGB values to create vertical colour stripes on a VGA display. Eight bands, each 80 pixels wide, make up the screen. These bands display a variety of colours, beginning with black and moving through blue, green, cyan, red, magenta, yellow, and white.
 
@@ -31,24 +31,14 @@ I tried my best to make sure the black backdrop, green triangles, and yellow cro
 
 ### **Synthesis**
 The synthesis and implementation outputs for my Jamaican flag design showed that the design successfully fit within the available resources of the Basys3 FPGA to an extent. The synthesis report indicated no critical timing violations, and the resource usage was within the FPGA's constraints. Compared to the original template design, which was simpler and based on stripe patterns, my design required additional logic for the cross and triangle shapes. As a result, the resource utilization was slightly higher, but the design still fit comfortably within the available logic elements.
-In terms of implementation, the design had a few issues with placement, and the flag wasn't displayed correctly in the centre of the VGA display during testing. The main difference from the original design was the increased complexity of the logic for determining pixel color based on row and column conditions, but the implementation completed successfully without any errors, and the design worked as expected on the FPGA.
+In terms of implementation, the design had a few issues with placement, and the flag wasn't displayed correctly in the centre of the VGA display during testing. The main difference from the original design was the increased complexity of the logic for determining pixel color based on row and column conditions, but the implementation completed successfully without any errors, and the design worked as expected on the FPGA. Below is my synthesised diagram and it shows how the design logic is physically mapped onto the FPGA board.
+<img src="docs/assets/images/synthesised design.png">
 ### **Demonstration**
 This was the outcome of my VGA display.
+<img src="docs/assets/images/SOC.png">
 
-## **More Markdown Basics**
-This is a paragraph. Add an empty line to start a new paragraph.
+## **RTL Analysis**
+Below is a view of my Register Transfer level of my Jamaican flag for my FPGA design.
+<img src="docs/assets/images/schematic.png">
 
-Font can be emphasised as *Italic* or **Bold**.
 
-Code can be highlighted by using `backticks`.
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list can be rendered as follows:
-- vectors
-- algorithms
-- iterators
-
-Images can be added by uploading them to the repository in a /docs/assets/images folder, and then rendering using HTML via githubusercontent.com as shown in the example below.
-
-<img src="https://raw.githubusercontent.com/melgineer/fpga-vga-verilog/main/docs/assets/images/VGAPrjSrcs.png">
